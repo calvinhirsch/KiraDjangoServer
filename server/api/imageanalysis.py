@@ -1,6 +1,6 @@
 import math
 import numpy as np
-from keras.models import Model, load_model
+#from keras.models import Model, load_model
 from imageio import imread
 import cv2
 import base64
@@ -16,11 +16,11 @@ def blur_metric(image):
 image is a tensor of shape
 [299, 299, 3]
 """
-def get_preds(image):
-    image = np.expand_dims(image, axis=0)
-    InceptionModel = load_model('iv3_v1.h5')
-    prediction = InceptionModel.predict(image)
-    return prediction
+#def get_preds(image):
+#    image = np.expand_dims(image, axis=0)
+#    InceptionModel = load_model('iv3_v1.h5')
+#    prediction = InceptionModel.predict(image)
+#    return prediction
 
 def cv_crop(image):
     imgray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
