@@ -1,0 +1,8 @@
+# [START django_app]
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT server.wsgi
+
+runtime_config:
+  python_version: 3
+# [END django_app]
